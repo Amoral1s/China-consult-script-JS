@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://ipapi.co/${ip}/country/`)
       .then(response => response.text())
       .then(data => {
-        if (data.trim() == 'RU') {
+        if (data.trim() != 'RU') {
           setTimeout(() => {
             renderFunc();
           }, 5000);
