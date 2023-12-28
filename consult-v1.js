@@ -19,7 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
               </svg>
             </div>
             <div class="pop-inter__wrap">
-              <img src="/wp-content/themes/main/img/avatar.png" alt="help">
+              <img src="https://consultinchina.ru/wp-content/uploads/2023/12/avatar.png" alt="help">
               <b>Здравствуйте, я Иван из Consultinchina</b>
               <p>Мы являемся Российским партнером данного поставщика и поможем вам в сопровождении заказа и доставки необходимого товара</p>
               <a href="https://consultinchina.ru/#open">Подробнее</a>
