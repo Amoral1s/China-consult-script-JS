@@ -1,7 +1,11 @@
+
 document.addEventListener('DOMContentLoaded', () => {
   const renderFunc = () => {
     const newDiv = document.createElement('div');
           const body = document.querySelector('body');
+          if (localStorage.getItem('opened') == 'opened') {
+            return
+          }
           newDiv.innerHTML = `
           <div class="overlay-inter"></div>
           <div class="pop-inter">
@@ -40,9 +44,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.style.display = 'none';
             popup.parentElement.style.display = 'none';
           });
-           if (localStorage.getItem('opened') == '') {
-            localStorage.setItem('opened', 'opened');
-          }
+          localStorage.setItem('opened', 'opened');
   }
 
   fetch('https://api.ipify.org?format=json')
