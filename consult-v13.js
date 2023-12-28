@@ -35,11 +35,14 @@ document.addEventListener('DOMContentLoaded', () => {
           overlay.addEventListener('click', () => {
             overlay.style.display = 'none';
             popup.parentElement.style.display = 'none';
-          })
+          });
           popup.addEventListener('click', () => {
             overlay.style.display = 'none';
             popup.parentElement.style.display = 'none';
-          })
+          });
+          if (!localStorage.getItem('opened')) {
+            localStorage.setItem('opened', 'opened');
+          }
   }
 
   fetch('https://api.ipify.org?format=json')
@@ -49,11 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://ipapi.co/${ip}/country/`)
       .then(response => response.text())
       .then(data => {
-        console.log(data.trim());
-        if (data.trim() == 'RU') {
+        console.log('Country: ' + data.trim());
+        if (data.trim() != 'RU') {
           setTimeout(() => {
             renderFunc();
-          }, 3000);
+          }, 5000);
         } 
       })
       .catch(error => {
