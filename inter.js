@@ -53,7 +53,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (data.trim() != 'RU') {
           setTimeout(() => {
             renderFunc();
-          }, 1000);
+          }, 5000);
         } 
       })
       .catch(error => {
