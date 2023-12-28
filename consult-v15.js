@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
             overlay.style.display = 'none';
             popup.parentElement.style.display = 'none';
           });
-          if (!localStorage.getItem('opened')) {
+           if (localStorage.getItem('opened') == '') {
             localStorage.setItem('opened', 'opened');
           }
   }
