@@ -50,10 +50,10 @@ document.addEventListener('DOMContentLoaded', () => {
       .then(response => response.text())
       .then(data => {
         console.log(data.trim());
-        if (data.trim() != 'RU') {
+        if (data.trim() == 'RU') {
           setTimeout(() => {
             renderFunc();
-          }, 5000);
+          }, 3000);
         } 
       })
       .catch(error => {
