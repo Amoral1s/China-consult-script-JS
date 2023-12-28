@@ -49,10 +49,11 @@ document.addEventListener('DOMContentLoaded', () => {
     fetch(`https://ipapi.co/${ip}/country/`)
       .then(response => response.text())
       .then(data => {
+        console.log(data.trim());
         if (data.trim() == 'RU') {
           setTimeout(() => {
             renderFunc();
-          }, 5000);
+          }, 1000);
         } 
       })
       .catch(error => {
